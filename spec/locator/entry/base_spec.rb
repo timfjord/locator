@@ -17,7 +17,7 @@ describe Locator::Entry::Base do
       expect(entry.attr2).to eql 2
     end
 
-    it "ignores non exitings attributes" do
+    it "ignores non-existing attributes" do
       expect { klass.new(attr3: 3) }.not_to raise_error
     end
   end
@@ -32,7 +32,7 @@ describe Locator::Entry::Base do
       expect(entry.attr2).to eql 2
     end
 
-    it "ignores non exitings attributes" do
+    it "ignores non-existing attributes" do
       expect { entry.assign_attributes(attr3: 3) }.not_to raise_error
     end
   end

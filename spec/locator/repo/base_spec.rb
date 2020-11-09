@@ -59,7 +59,7 @@ describe Locator::Repo::Base do
       sorted = repo.sort_by { |e| -e.val }
 
       expect(sorted.size).to eql 10
-      expect(sorted[0].val).to eql 10
+      expect(sorted.first.val).to eql 10
       expect(sorted.last.val).to eql 1
     end
   end
