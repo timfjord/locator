@@ -2,6 +2,25 @@
 
 module Locator
   module Repo
+    # Base class for repos(collections).
+    # Requires `#load` method to be overridden in child classes.
+    # It implements the enumarator interface and also supports some
+    # Array-like methods: `#[]`, `#last`, `#empty?`, etc.
+    #
+    # In order to chain methods, `#new` private method should be used.
+    # It takes either the argument or whatever the block returns and
+    # returns a copy of the given object with modified scope.
+    # Some basic enumerable methods already use `#new` under the hood,
+    # but it can be used in subclasses too:
+    #
+    #   def my_filter
+    #     new do
+    #       # do something with the scope
+    #     end
+    #   end
+    #
+    # It is implemented as a private method on purpose so the scope
+    # can be updated only within the class.
     class Base
       extend Forwardable
       include Enumerable

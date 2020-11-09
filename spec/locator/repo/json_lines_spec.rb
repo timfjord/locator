@@ -4,11 +4,11 @@ require 'spec_helper'
 
 describe Locator::Repo::JsonLines do
   describe "#load" do
-    let(:json_file) { nil }
-    let(:repo) { described_class.new(Hash, json_file) }
+    let(:file_path) { nil }
+    let(:repo) { described_class.new(Hash, file_path) }
 
     context "with an invalid json file" do
-      let(:json_file) { 'spec/fixtures/customers_invalid.txt' }
+      let(:file_path) { 'spec/fixtures/customers_invalid.txt' }
 
       it "raises an error" do
         expect { repo.load }.to raise_error JSON::ParserError
@@ -16,7 +16,7 @@ describe Locator::Repo::JsonLines do
     end
 
     context "with a valid json file" do
-      let(:json_file) { 'spec/fixtures/customers.txt' }
+      let(:file_path) { 'spec/fixtures/customers.txt' }
 
       it "reads the file" do
         data = repo.load
