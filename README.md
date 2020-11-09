@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/timsly/locator.svg?branch=main)](https://travis-ci.org/timsly/locator)
 
-A CLI to locate customers from a json file within 100km radius of the given location
+A CLI to locate customers from a file within 100km radius of the given location
 
 ## Installation
 
@@ -11,9 +11,9 @@ A CLI to locate customers from a json file within 100km radius of the given loca
 
 ## Usage
 
-To locate entries from a json file:
+To locate entries from a file:
 
-    $ bin/locator <path_to_json_file>
+    $ bin/locator <path_to_file>
 
 There is a test json file in the `spec/fixtures` folder that can be used for testing:
 
@@ -21,7 +21,7 @@ There is a test json file in the `spec/fixtures` folder that can be used for tes
 
 ## Development
 
-To run a pry session:
+To start a pry session:
 
     $ bin/console
 
@@ -29,11 +29,12 @@ To run all tests:
 
     $ bin/test
 
-`bin/test` is just a shortcut for `bundle exec rspec` but it forwards all arguments to `rspec`:
+`bin/test` is just a shortcut for `bundle exec rspec` but it forwards all arguments to `rspec`
+so the following command works:
 
     $ bin/test spec/locator/cli_spec.rb:12
 
-Check specs in `spec/locator` forder for specific user cases
+Check specs in the `spec/locator` forder for specific use cases.
 
 ## Notes
 
