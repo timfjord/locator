@@ -7,7 +7,7 @@ module Locator
     attr_accessor :name, :user_id
     attr_reader :latitude, :longitude
 
-    def_delegator :location, :distance_to
+    def_delegators :location, :distance_to
 
     def latitude=(val)
       @location = nil

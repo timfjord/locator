@@ -2,7 +2,7 @@
 
 module Locator
   class Location
-    EARTH_RADIUS = 6371.009 # in km
+    EARTH_RADIUS = 6371.009 # km
 
     using Refinements::ToRadians
 
