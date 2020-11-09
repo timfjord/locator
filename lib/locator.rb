@@ -10,5 +10,6 @@ require 'locator/customer'
 require 'locator/repo/base'
 require 'locator/repo/json_lines'
 require 'locator/customers'
+require 'locator/cli'
 
 module Locator; end
