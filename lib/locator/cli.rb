@@ -2,14 +2,14 @@
 
 module Locator
   class CLI
-    def initialize(json_file)
-      @json_file = json_file.to_s.strip
+    def initialize(file_path)
+      @file_path = file_path.to_s.strip
 
-      raise ArgumentError, <<~BANNER.strip if @json_file.empty?
-        JSON file is required
+      raise ArgumentError, <<~BANNER.strip if @file_path.empty?
+        File is required
 
         Usage:
-          bin/locator <path_to_json_file>
+          bin/locator <path_to_file>
       BANNER
     end
 
@@ -22,7 +22,7 @@ module Locator
     private
 
     def customers
-      @customers ||= Customers.new(@json_file)
+      @customers ||= Customers.new(@file_path)
     end
 
     def dublin_office
