@@ -5,9 +5,9 @@ require 'spec_helper'
 describe Locator::Customers do
   describe "#near" do
     let(:customers) { described_class.new('file.json') }
-    let(:customer1) { Locator::Customer.new(name: 'Customer1', latitude: 53.339428, longitude: -6.257664) }
-    let(:customer2) { Locator::Customer.new(name: 'Customer1', latitude: 53.339428, longitude: -6.357664) }
-    let(:customer3) { Locator::Customer.new(name: 'Customer2', latitude: 53.339428, longitude: -8.357664) }
+    let(:customer1) { Locator::Customer.new(name: 'Customer1', latitude: 53.2451022, longitude: -6.238335) }
+    let(:customer2) { Locator::Customer.new(name: 'Customer1', latitude: 54.180238, longitude: -5.920898) }
+    let(:customer3) { Locator::Customer.new(name: 'Customer2', latitude: 51.92893, longitude: -10.27699) }
     let(:location) { Locator::Location.new(53.339428, -6.257664) }
 
     before do
@@ -23,7 +23,7 @@ describe Locator::Customers do
     end
 
     it "allows to specify the radius in km" do
-      nearby = customers.near(location, radius: 5)
+      nearby = customers.near(location, radius: 20)
 
       expect(nearby.size).to eql 1
       expect(nearby).to include customer1
