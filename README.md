@@ -15,7 +15,7 @@ To locate entries from a file:
 
     $ bin/locator <path_to_file>
 
-There is [a test json file](https://github.com/timsly/locator/blob/main/spec/fixtures/customers.txt) in the `spec/fixtures` folder that can be used for testing:
+There is [a test file](https://github.com/timsly/locator/blob/main/spec/fixtures/customers.txt) in the `spec/fixtures` folder that can be used for testing:
 
     $ bin/locator spec/fixtures/customers.txt
 
