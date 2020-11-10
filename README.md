@@ -15,7 +15,7 @@ To locate entries from a file:
 
     $ bin/locator <path_to_file>
 
-There is a test json file in the `spec/fixtures` folder that can be used for testing:
+There is [a test json file](https://github.com/timsly/locator/blob/main/spec/fixtures/customers.txt) in the `spec/fixtures` folder that can be used for testing:
 
     $ bin/locator spec/fixtures/customers.txt
 
@@ -34,7 +34,7 @@ so the following command works:
 
     $ bin/test spec/locator/cli_spec.rb:12
 
-Check specs in the `spec/locator` forder for specific use cases.
+Check [specs in the `spec/locator` forder](https://github.com/timsly/locator/tree/main/spec/locator) for specific use cases.
 
 ## Notes
 
